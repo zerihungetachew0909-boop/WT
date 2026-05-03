@@ -1,13 +1,12 @@
 # https://api.telegram.org/bot<8492305264:AAHUbwlnrW3QkLVUXAQpAbRYNwJ7t9Cmu-s>/setwebhook?url=https://yourapp.onrender.com/webhook/<8492305264:AAHUbwlnrW3QkLVUXAQpAbRYNwJ7t9Cmu-s>
+import os
 from telegram import Update
 from telegram.ext import ApplicationBuilder, CommandHandler, ContextTypes
-
-import os
 
 TOKEN = os.getenv("BOT_TOKEN")
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    await update.message.reply_text("Bot is working!")
+    await update.message.reply_text("Bot is working ✅")
 
 app = ApplicationBuilder().token(TOKEN).build()
 
